@@ -311,7 +311,7 @@ curl http://127.0.0.1:8899/api/status
 |---------|-------------|---------|
 | **🗑️ Terminal Command Center Removed** | Removed /aitest command, dashboard terminal UI | Cleaner codebase, focused on WA ✅ |
 | **🗑️ AI Chat Interface Removed** | Dashboard's separate LLM client removed | Simplified dashboard ✅ |
-| **🎯 Project Rebranded** | UNIXwaBOT → WABro | Clear identity focus ✅ |
+| **🎯 Project Rebranded** | WABro → WABro | Clear identity focus ✅ |
 
 ### **v2.9.0 - Multi-Turn Conversation Memory (April 11, 2026)**
 
