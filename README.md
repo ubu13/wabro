@@ -142,7 +142,9 @@ WABro/
 - ✅ **Private Chat** - Full response mode
 - ✅ **Message Deduplication** - Hash-based duplicate detection
 - ✅ **Message Age Filtering** - Ignores messages older than 1 hour
-- ✅ **Multi-line Message Sending** - Clipboard paste (avoids WhatsApp splitting)
+- ✅ **Multi-line Message Stability** - Shift+Enter line breaks prevent WhatsApp splitting
+- ✅ **Background-Safe Sending** - Works even when browser is minimized/on another desktop
+- ✅ **Send Verification** - Confirms message appears in chat before marking as sent
 - ✅ **Reply Chaining** - Quotes original message in replies
 - ✅ **Quote/Reply Detection** - Multiple DOM selectors for accurate detection
 - ✅ **Automatic Reconnection** - Retry logic with exponential backoff
@@ -153,14 +155,15 @@ WABro/
 - ✅ **Multi-LLM Support** - Gemini, Groq (4 models), Ollama (offline)
 - ✅ **Groq 4-Tier Model Routing** - Auto-routes by complexity (greeting→8B, general→20B, factual→70B, coding→120B)
 - ✅ **Smart Replies** - Context-aware responses
-- ✅ **Rules Engine** - 13 hardcoded rules (bypasses LLM)
+- ✅ **Rules Engine** - 10 hardcoded rules (bypasses LLM)
 - ✅ **RAG Knowledge Base** - Document upload + web crawling (HYBRID/FULL RAG/GENERAL AI modes)
 - ✅ **Guided Freedom** - Creative, varied responses (temperature 0.8, no templates)
 - ✅ **API Key Rotation** - Round-robin with persistent index (survives restarts)
 - ✅ **Web Search** - DuckDuckGo integration (weather, financial, news, sports, politics)
 - ✅ **Regional Language Detection** - Javanese, Sundanese, Batak, Minang, Bugis, Banjar
 - ✅ **Context-Aware Replies** - Full conversation history always sent to LLM
-- ✅ **Conversation Memory** - Multi-turn history per sender (10 exchanges, 1h TTL)
+- ✅ **Persistent Conversation Memory** - SQLite-backed, survives restarts (5 exchanges, 30-day TTL)
+- ✅ **Summary Compression** - Auto-compresses old exchanges to save tokens (~44% savings for cloud LLMs)
 - ✅ **Rate Limit Handling** - Cooldown/backoff on 429 errors
 - ✅ **Quote Context Extraction** - Extracts quoted/replied message text for LLM context
 
@@ -183,6 +186,8 @@ WABro/
 - ✅ **Auto-detect Running Agent** - Scans psutil to detect agent started outside dashboard
 - ✅ **SPA Architecture** - Single-page app with catch-all routing
 - ✅ **WhatsApp Status Broadcast** - WebSocket broadcasts of connection status changes
+- ✅ **Page Health Check** - Auto-recovers WhatsApp Web page after idle/disconnect
+- ✅ **Auto Mark as Read** - Prevents duplicate message processing (no more flood loops)
 
 ### **Analytics & Database**
 - ✅ **SQLite Database** - Dual-write (text files + SQLite simultaneously)
